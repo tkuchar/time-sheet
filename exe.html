@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> JML Timesheet </title>
+	<meta name="viewport" content="width = device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+	<body onscroll="peeky()">
+	<img class="gif" src="">
+	<object type="image/svg+xml" data="./svg/jml-svg.svg" class="logo">
+	</object>
+	<div class="audio">
+		<p class="audiop"> Relax while you fill out the form </p>
+		<audio style="font-size: 5px; height: 30px" controls loop>
+			<source src="trimmed.mp3">
+		</audio>
+	</div>
+	
+	<div class="timesheet-header">
+		<h1 class="timesheet-header-title"> Timesheet </h1>
+		<h3> (for all hourly employees) </h3>
+	</div>
+	
+	<form id="form">
+		
+		<div class="period-ending">
+			<label for="period-ending"> Period Ending </label>
+			<input name="period-ending" type="text">
+		</div>
+		
+		<div class="period-days">
+			<label for="period-days"> Days in Period </label>
+			<input name="period-days" type="text" >
+		</div>
+		
+		<div class="employee-name">
+			<label for="employee-name"> Employee Name: </label>
+			<input name="employee-name" type="text" >
+		</div>
+		
+		<div class="time-in-out">
+			<label for="time-in"> Time In / Time Out: </label>
+			<input name="time-in" type="text">
+			
+			<label for="lunch-length"> Lunch: </label>
+			<input name="lunch-length" type="text">
+			
+			<label for="per-day"> Total per Day: </label>
+			<input name="per-day" type="text">
+		</div>
+		
+		<section class="calendar">
+			<table>
+				<tr>
+					<th> Monday </th>
+					<th> Tuesday </th>
+					<th> Wednesday </th>
+					<th> Thursday </th>
+					<th> Friday </th>
+				</tr>
+				<tr>
+					<td>
+						<div class="td-interior">
+							<label for="date"> Date: </label>
+							<input name="date" type="text">
+							<label for="time-in-out"> Time In / Time Out: </label>
+							<input name="time-in-out" type="text">
+							<label for="lunch"> Lunch: </label>
+							<input name="lunch" type="text">
+							<label for="total"> Total: </label>
+							<input name="total" type="text">
+						</div>
+					</td>
+					<td>
+						<div class="td-interior">
+							<label for="date"> Date: </label>
+							<input name="date" type="text">
+							<label for="time-in-out"> Time In / Time Out: </label>
+							<input name="time-in-out" type="text">
+							<label for="lunch"> Lunch: </label>
+							<input name="lunch" type="text">
+							<label for="total"> Total: </label>
+							<input name="total" type="text">
+						</div>
+					</td>
+					<td>
+						<div class="td-interior">
+							<label for="date"> Date: </label>
+							<input name="date" type="text">
+							<label for="time-in-out"> Time In / Time Out: </label>
+							<input name="time-in-out" type="text">
+							<label for="lunch"> Lunch: </label>
+							<input name="lunch" type="text">
+							<label for="total"> Total: </label>
+							<input name="total" type="text">
+						</div>
+					</td>
+					<td> 
+						<div class="td-interior">
+							<label for="date"> Date: </label>
+							<input name="date" type="text">
+							<label for="time-in-out"> Time In / Time Out: </label>
+							<input name="time-in-out" type="text">
+							<label for="lunch"> Lunch: </label>
+							<input name="lunch" type="text">
+							<label for="total"> Total: </label>
+							<input name="total" type="text">
+						</div>
+					</td>
+					<td>
+						<div class="td-interior">
+							<label for="date"> Date: </label>
+							<input name="date" type="text">
+							<label for="time-in-out"> Time In / Time Out: </label>
+							<input name="time-in-out" type="text">
+							<label for="lunch"> Lunch: </label>
+							<input name="lunch" type="text">
+							<label for="total"> Total: </label>
+							<input name="total" type="text">
+						</div>
+					</td>
+				<tr>
+				
+				<tr>
+					<td>
+						<div class="td-interior">
+							<label for="date"> Date: </label>
+							<input name="date" type="text">
+							<label for="time-in-out"> Time In / Time Out: </label>
+							<input name="time-in-out" type="text">
+							<label for="lunch"> Lunch: </label>
+							<input name="lunch" type="text">
+							<label for="total"> Total: </label>
+							<input name="total" type="text">
+						</div>
+					</td>
+					<td>
+						<div class="td-interior">
+							<label for="date"> Date: </label>
+							<input name="date" type="text">
+							<label for="time-in-out"> Time In / Time Out: </label>
+							<input name="time-in-out" type="text">
+							<label for="lunch"> Lunch: </label>
+							<input name="lunch" type="text">
+							<label for="total"> Total: </label>
+							<input name="total" type="text">
+						</div>
+					</td>
+					<td>
+						<div class="td-interior">
+							<label for="date"> Date: </label>
+							<input name="date" type="text">
+							<label for="time-in-out"> Time In / Time Out: </label>
+							<input name="time-in-out" type="text">
+							<label for="lunch"> Lunch: </label>
+							<input name="lunch" type="text">
+							<label for="total"> Total: </label>
+							<input name="total" type="text">
+						</div>
+					</td>
+					<td> 
+						<div class="td-interior">
+							<label for="date"> Date: </label>
+							<input name="date" type="text">
+							<label for="time-in-out"> Time In / Time Out: </label>
+							<input name="time-in-out" type="text">
+							<label for="lunch"> Lunch: </label>
+							<input name="lunch" type="text">
+							<label for="total"> Total: </label>
+							<input name="total" type="text">
+						</div>
+					</td>
+					<td>
+						<div class="td-interior">
+							<label for="date"> Date: </label>
+							<input name="date" type="text">
+							<label for="time-in-out"> Time In / Time Out: </label>
+							<input name="time-in-out" type="text">
+							<label for="lunch"> Lunch: </label>
+							<input name="lunch" type="text">
+							<label for="total"> Total: </label>
+							<input name="total" type="text">
+						</div>
+					</td>
+				<tr>
+				
+								<tr>
+					<td>
+						<div class="td-interior">
+							<label for="date"> Date: </label>
+							<input name="date" type="text">
+							<label for="time-in-out"> Time In / Time Out: </label>
+							<input name="time-in-out" type="text">
+							<label for="lunch"> Lunch: </label>
+							<input name="lunch" type="text">
+							<label for="total"> Total: </label>
+							<input name="total" type="text">
+						</div>
+					</td>
+					<td>
+						<div class="td-interior">
+							<label for="date"> Date: </label>
+							<input name="date" type="text">
+							<label for="time-in-out"> Time In / Time Out: </label>
+							<input name="time-in-out" type="text">
+							<label for="lunch"> Lunch: </label>
+							<input name="lunch" type="text">
+							<label for="total"> Total: </label>
+							<input name="total" type="text">
+						</div>
+					</td>
+					<td>
+						<div class="td-interior">
+							<label for="date"> Date: </label>
+							<input name="date" type="text">
+							<label for="time-in-out"> Time In / Time Out: </label>
+							<input name="time-in-out" type="text">
+							<label for="lunch"> Lunch: </label>
+							<input name="lunch" type="text">
+							<label for="total"> Total: </label>
+							<input name="total" type="text">
+						</div>
+					</td>
+					<td> 
+						<div class="td-interior">
+							<label for="date"> Date: </label>
+							<input name="date" type="text">
+							<label for="time-in-out"> Time In / Time Out: </label>
+							<input name="time-in-out" type="text">
+							<label for="lunch"> Lunch: </label>
+							<input name="lunch" type="text">
+							<label for="total"> Total: </label>
+							<input name="total" type="text">
+						</div>
+					</td>
+					<td>
+						<div class="td-interior">
+							<label for="date"> Date: </label>
+							<input name="date" type="text">
+							<label for="time-in-out"> Time In / Time Out: </label>
+							<input name="time-in-out" type="text">
+							<label for="lunch"> Lunch: </label>
+							<input name="lunch" type="text">
+							<label for="total"> Total: </label>
+							<input name="total" type="text">
+						</div>
+					</td>
+				<tr>
+			</table>
+		</section>
+		
+		<div>
+			<label class="total-hours" for="total-hours"> Total Hours for Pay Period: </label>
+			<input class="total-hours" name="total-hours">
+		</div>
+		
+		<div class="genos-box">
+			<input name="checkbox" class="check" type="checkbox">
+			<label for="checkbox"> Set Genos </label>
+		</div>
+		
+		<input class="submit" type="submit" value="Get Paid">
+		
+	</form>
+	
+	<button class="print" onclick="window.print()"> Print </button>
+	
+	<a class="totoro-link" href="https://tkuchar.github.io/ghibli/" target=blank>
+		<p class="totoro-hover"> Hai. </p>
+		<img class="totoro" src="totoro.jpg">
+	</a>
+	
+	<script> moment().format(); </script>
+	<script src="moment.js"></script>
+	<script src="app.js" async defer ></script>
+	
+	</body>
+</html>
