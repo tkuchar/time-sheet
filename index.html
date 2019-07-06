@@ -15,6 +15,16 @@
 			<source src="trimmed.mp3">
 		</audio>
 	</div>
+
+	<div id="dayProgressWidget">
+		<h1 class="widgetTitle"> Day Complete </h1>
+		<progress value="15.74074074074074" max="100"></progress>
+		<div class="show-percent-container">
+			<p> You are at </p>
+			<h3>15.74%</h3>
+			<p class="keepitup"> Keep it up! </p>
+		</div>
+	</div>
 	
 	<div class="timesheet-header">
 		<h1 class="timesheet-header-title"> Timesheet </h1>
@@ -273,6 +283,35 @@
 	<script> moment().format(); </script>
 	<script src="moment.js"></script>
 	<script src="app.js" async defer ></script>
-	
+	<script>
+		const shiftLength = 9 * 60;
+		const shiftStart = (8 * 60) + 15;
+		const keepitup = document.querySelector(".keepitup");
+		const iframe = document.querySelector("iframe");
+		const percentView = document.querySelector('h3');
+
+		function start () {
+		  setInterval(function() {
+		let date = new Date();
+		let seconds = date.getSeconds();
+		let currentHours = date.getHours() * 60;
+		let currentMinutes = date.getMinutes();
+		let now = (currentHours + currentMinutes) - shiftStart;
+		  
+		  document.querySelector('progress').value = (now / shiftLength) * 100;
+				let num = `${((now / shiftLength) * 100).toFixed(2)}%`;
+				percentView.textContent = num;
+				
+		  if (parseInt(num) >= 100) {
+			keepitup.textContent = "You made it!";
+			iframe.style.transform = 'rotate(1080deg) scale(0)';
+			clearInterval(start);
+			}
+			
+		}, 2000);
+		}
+
+		start();
+	</script>
 	</body>
 </html>

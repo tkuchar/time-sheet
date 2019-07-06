@@ -93,7 +93,7 @@ form.addEventListener("submit", function(evt) {
 
 
 function peeky() {
-	if ((innerHeight > 800 && pageYOffset > 100) || (innerHeight < 700 && pageYOffset > 200)) {
+	if ((innerHeight > 800 && pageYOffset > 100) || (innerHeight < 800 && pageYOffset > 200)) {
 	totoro.style.opacity = 1;
 	totoro.style.transform = "translateY(125px)";
 	}

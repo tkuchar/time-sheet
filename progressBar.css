@@ -1,0 +1,45 @@
+#dayProgressWidget {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: grid;
+	width: 300px;
+	margin: 0;
+	text-align: center;
+	background-color: #000000eb;
+	color: white;
+	border-radius: 10px;
+}
+
+.show-percent-container {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  font-size: 15px;
+}
+
+div > p {
+  padding: 10px;
+}
+
+progress {
+  background-color: black;
+  width: 275px;
+  justify-self: center;
+  height: 35px;
+}
+
+.widgetTitle {
+	font-size: 30px;
+}
+
+progress::-webkit-progress-bar {
+	background-color: white;
+}
+
+progress::-webkit-progress-value {
+  background-image: linear-gradient(to right, orange, red);
+  box-shadow: 0 0 10px red;
+}
+
+	
